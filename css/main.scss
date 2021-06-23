@@ -1,0 +1,223 @@
+@import 'partials/reset';
+@import 'partials/mediaQuery';
+@import 'partials/color';
+@import 'partials/spacing';
+@import 'partials/base';
+@import 'partials/menu';
+
+#home {
+  background-color: $Bg-home;
+
+  &::before{
+    content: '';
+    width: 100%;
+    height: 300px;
+
+    @include responsive-notebook(){
+      height: 230px;
+    }
+
+    @include responsive-notebook-Small(){
+      height: 200px;
+    }
+    
+    @include responsive-notebook-height-medium(){
+      height: 190px;
+    }
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: url('../img/bg-fundo.png') no-repeat;
+    background-size: cover;
+    z-index: 10;
+  }
+  
+
+  @include responsive-tablet-large(){
+    &::before{
+      content: '';
+      width: 0;
+      height: 0;
+      
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      background: none;
+    }
+  }
+
+
+  @include responsive-tablet-large(){
+    background: url('../img/home-img-02.png') no-repeat;
+    background-size: 140%, 60%;
+  }
+}
+
+.sessao__home {
+  
+  width: 100%;
+  height: calc(100vh - 135px);
+  
+
+  display: flex;
+  flex-direction: row;
+
+  @include responsive-tablet-Small(){
+    height: calc(100vh - 210px);
+  }
+
+  @include responsive-mobile-Medium(){
+    height: calc(100vh - 350px);
+  }
+
+  @include responsive-mobile-Small(){
+    height: calc(100vh - 450px);
+  }
+
+  .home-grid-1 {
+    padding-top: $gap-4;
+    max-width: 576px;
+    z-index: 10;
+
+    @include responsive-notebook(){
+      max-width: 550px;
+    }
+
+    @include responsive-notebook-Small(){
+      max-width: 450px;
+      padding-top: $gap-3;
+    }
+
+    @include responsive-notebook-height-medium(){
+      padding-top: $gap-3;
+    }
+
+    h1 { 
+      @include baseTituloSite(90px, $Lato, $Font-01);
+      font-weight: 700;
+      padding-bottom: $gap-2;
+      max-width: 376px;
+
+
+      @include responsive-notebook-height-medium(){
+        @include baseTituloSite(60px, $Lato, $Font-01);
+        max-width: 100%;
+      }
+
+      @include responsive-tablet-Small(){
+        @include baseTituloSite(42px, $Lato, $Font-01);
+      }
+    }
+
+    p {
+      @include baseTituloParagrafo(22px, $Montserrat, $Font-01);  
+      
+      @include responsive-notebook-Small(){
+        @include baseTituloParagrafo(20px, $Montserrat, $Font-01); 
+      }
+
+      @include responsive-tablet-large(){
+        display: none;
+      }
+    }
+  }
+
+  .home-grid-2 {
+    @include responsive-tablet-large(){
+      display: none;
+    }
+
+    img {
+      width: 102%;
+
+      @include responsive-notebook(){
+        width: 120%;
+        top: 10%;
+        right: 0%;
+      }
+
+      @include responsive-notebook-Small(){
+        width: 120%;
+        top: 15%;
+        right: -3%;
+      }
+
+      @include responsive-notebook-height(){
+        width: 80%;
+      }
+
+      @include responsive-notebook-height-medium(){
+        width: 75%;
+      }
+
+
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}
+
+.mobile__home__session {
+  display: none;
+  
+  @include responsive-tablet-Small(){
+    display: block;
+    background: url('../img/bg-fundo-mbl.png') no-repeat;
+    background-size: cover;
+
+    div {
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+      height: 50vh;
+
+      p {
+        @include baseTituloParagrafo(18px, $Montserrat, $Font-02);
+        text-align: center;
+        padding-bottom: $gap-3;
+      }
+    }
+    
+  }  
+}
+
+//=====  Icone Wpp  =====//
+.wpp-icon {
+  position: fixed;
+  width: 130px;
+  height: 80px;
+  bottom: 200px;
+  left: -5px;
+  font-family: $Lato;
+  background-color: $Font-03;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 28px;
+  z-index: 11;
+  cursor: pointer;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 65px rgba(0, 0, 0, .2);
+  
+  @include responsive-tablet-large(){
+    font-size: 24px;
+  }
+
+  @include responsive-mobile-Medium(){
+    font-size: 20px;
+    max-width: 100px;
+    padding-top: 8px;
+  }
+
+  p {
+    padding-top: 8px;
+      
+  }
+
+  @include responsive-notebook-height-medium(){
+    bottom: 120px;
+  }
+}

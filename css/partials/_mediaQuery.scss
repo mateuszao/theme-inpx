@@ -1,0 +1,54 @@
+@mixin responsive-notebook(){
+  @media screen and ( max-width: 1438px ){
+    @content;
+  }  
+}
+
+@mixin responsive-notebook-medium(){
+  @media screen and ( max-width: 1320px ){
+    @content;
+  }  
+}
+
+@mixin responsive-notebook-Small(){
+   @media screen and ( max-width: 1120px ){
+    @content;
+  }
+}
+
+@mixin responsive-tablet-large(){ 
+  @media screen and ( max-width: 980px ){
+    @content;
+  }  
+}
+
+@mixin responsive-tablet-Small(){
+  @media screen and ( max-width: 756px ){
+    @content;
+  }  
+}
+
+@mixin responsive-mobile-Medium(){
+  @media screen and ( max-width: 450px ){
+    @content;
+  }  
+}
+
+@mixin responsive-mobile-Small(){
+  @media screen and ( max-width: 320px ){
+    @content;
+  }  
+}
+
+// Media Queries height
+@mixin responsive-notebook-height(){
+  @media screen and ( max-height: 920px ){
+    @content;
+  }  
+}
+
+@mixin responsive-notebook-height-medium(){
+  @media screen and ( max-height: 630px ){
+    @content;
+  }  
+}
