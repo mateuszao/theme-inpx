@@ -137,8 +137,9 @@ img {
 }
 
 @media screen and (max-width: 1438px) {
-  .menu-logo {
-    width: 100px;
+  .menu-logo img {
+    width: 59px;
+    height: 75px;
   }
 }
 
@@ -192,12 +193,11 @@ img {
 
 @media screen and (max-width: 980px) {
   .menu .mainMenu {
-    width: 100%;
+    width: 70%;
     height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
-    left: 0;
     z-index: 1000;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -206,31 +206,32 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: #EDEDED;
-    -webkit-transition: top 1s ease;
-    transition: top 1s ease;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 128px;
+    background: #931854;
+    -webkit-transition: right 1s ease;
+    transition: right 1s ease;
     display: none;
   }
   .menu .mainMenu .closeMenu {
     display: block;
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 0px;
   }
   .menu .openMenu {
     display: block;
   }
   .menu a {
-    color: #0B6699;
+    color: #FFFFFF;
+    font-family: "Lato", sans-serif;
+    font-size: 28px;
+    padding-bottom: 48px;
   }
   .closeMenu {
-    color: #0B6699;
+    color: #FFFFFF;
   }
   .openMenu {
     position: absolute;
@@ -309,13 +310,13 @@ img {
 
 @media screen and (max-width: 756px) {
   .sessao__home {
-    height: calc(100vh - 290px);
+    height: calc(100vh - 250px);
   }
 }
 
 @media screen and (max-width: 450px) {
   .sessao__home {
-    height: calc(100vh - 450px);
+    height: calc(100vh - 330px);
   }
 }
 
@@ -376,9 +377,10 @@ img {
 
 @media screen and (max-width: 756px) {
   .sessao__home .home-grid-1 h1 {
-    font-size: 42px;
+    font-size: 38px;
     font-family: "Lato", sans-serif;
     color: #0B6699;
+    max-width: 175px;
   }
 }
 

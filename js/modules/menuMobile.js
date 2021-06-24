@@ -9,10 +9,10 @@ export default function menuMobile() {
 
   function show(){
       mainMenu.style.display = 'flex';
-      mainMenu.style.top = '0';
+      mainMenu.style.right = '0';
 
   }
   function close(){
-      mainMenu.style.top = '-130%';
+      mainMenu.style.right = '-100%';
   }
 }
