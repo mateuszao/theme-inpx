@@ -61,7 +61,8 @@
 
 // Media Queries height mobile
 @mixin responsive-notebook-height-mobile(){
-  @media screen and ( max-height: 640px ){
+  
+  @media ( max-height: 640px ) and ( max-width: 320px ){ 
     @content;
   }  
 }
