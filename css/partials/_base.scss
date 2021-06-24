@@ -60,17 +60,16 @@ img {
 
   @include responsive-tablet-Small(){
     max-width: 450px;
-    border: solid red;
   }
 
   @include responsive-mobile-Medium(){
     max-width: 300px;
-    border: solid yellow;
+    //border: solid yellow;
   }
 
   @include responsive-mobile-Small(){
     max-width: 280px;
-    border: solid green;
+    //border: solid green;
   }
 }
 

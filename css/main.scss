@@ -66,15 +66,20 @@
   flex-direction: row;
 
   @include responsive-tablet-Small(){
-    height: calc(100vh - 210px);
+    height: calc(100vh - 290px);
   }
 
   @include responsive-mobile-Medium(){
-    height: calc(100vh - 350px);
+    height: calc(100vh - 450px);
   }
 
   @include responsive-mobile-Small(){
-    height: calc(100vh - 450px);
+    height: calc(100vh - 500px);
+  }
+
+  //Mobile height
+  @include responsive-notebook-height-mobile(){
+    height: calc(100vh - 250px);
   }
 
   .home-grid-1 {
@@ -178,6 +183,10 @@
         @include baseTituloParagrafo(18px, $Montserrat, $Font-02);
         text-align: center;
         padding-bottom: $gap-3;
+
+        @include responsive-notebook-height-mobile(){
+          padding-bottom: $gap-2;
+        }
       }
     }
     
@@ -210,6 +219,11 @@
     font-size: 20px;
     max-width: 100px;
     padding-top: 8px;
+  }
+
+  @include responsive-tablet-Small(){
+     display: none;
+    // border: solid red;
   }
 
   p {

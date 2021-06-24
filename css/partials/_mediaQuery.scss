@@ -52,3 +52,10 @@
     @content;
   }  
 }
+
+// Media Queries height mobile
+@mixin responsive-notebook-height-mobile(){
+  @media screen and ( max-height: 640px ){
+    @content;
+  }  
+}
