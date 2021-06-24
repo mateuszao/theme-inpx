@@ -21,10 +21,6 @@
       height: 200px;
     }
     
-    @include responsive-notebook-height-medium(){
-      height: 190px;
-    }
-    
     position: absolute;
     bottom: 0;
     left: 0;
@@ -34,7 +30,6 @@
     z-index: 10;
   }
   
-
   @include responsive-tablet-large(){
     &::before{
       content: '';
@@ -49,19 +44,17 @@
     }
   }
 
-
   @include responsive-tablet-large(){
-    background: url('../img/home-img-02.png') no-repeat;
+    background: url('../img/home-img-02-menina.png') no-repeat;
     background-size: 140%, 60%;
+
   }
 }
 
 .sessao__home {
-  
   width: 100%;
   height: calc(100vh - 135px);
   
-
   display: flex;
   flex-direction: row;
 
@@ -77,9 +70,8 @@
     height: calc(100vh - 500px);
   }
 
-  //Mobile height
   @include responsive-notebook-height-mobile(){
-    height: calc(100vh - 250px);
+    height: calc(100vh - 200px);
   }
 
   .home-grid-1 {
@@ -115,6 +107,7 @@
       @include responsive-tablet-Small(){
         @include baseTituloSite(42px, $Lato, $Font-01);
         max-width: 175px;
+        margin-left: -10px;
       }
     }
 
@@ -136,36 +129,11 @@
       display: none;
     }
 
+    display: flex;
+    flex: 1;
+
     img {
-      width: 102%;
-
-      @include responsive-notebook(){
-        width: 120%;
-        top: 10%;
-        right: 0%;
-      }
-
-      @include responsive-notebook-Small(){
-        width: 120%;
-        top: 15%;
-        right: -3%;
-      }
-
-      @include responsive-notebook-height(){
-        width: 83%;
-      }
-
-      @include responsive-notebook-height-medium-1(){
-        width: 70%;
-      }
-
-      // @include responsive-notebook-height-medium(){
-      //   width: 75%;
-      // }
-
-
-      position: relative;
-      overflow: hidden;
+      object-fit: cover;  
     }
   }
 }
@@ -173,7 +141,7 @@
 .mobile__home__session {
   display: none;
   
-  @include responsive-tablet-Small(){
+  @include responsive-tablet-large(){
     display: block;
     background: url('../img/bg-fundo-mbl.png') no-repeat;
     background-size: cover;
@@ -198,12 +166,12 @@
   }  
 }
 
-//=====  Icone Wpp  =====//
-.wpp-icon {
+//=====  Icone Lateral  =====//
+.icon {
   position: fixed;
   width: 130px;
   height: 80px;
-  bottom: 200px;
+  bottom: 110px;
   left: -5px;
   font-family: $Lato;
   background-color: $Font-03;
@@ -228,7 +196,6 @@
 
   @include responsive-tablet-Small(){
      display: none;
-    // border: solid red;
   }
 
   p {

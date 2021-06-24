@@ -271,12 +271,6 @@ img {
   }
 }
 
-@media screen and (max-height: 630px) {
-  #home::before {
-    height: 190px;
-  }
-}
-
 @media screen and (max-width: 980px) {
   #home::before {
     content: '';
@@ -291,7 +285,7 @@ img {
 
 @media screen and (max-width: 980px) {
   #home {
-    background: url("../img/home-img-02.png") no-repeat;
+    background: url("../img/home-img-02-menina.png") no-repeat;
     background-size: 140%, 60%;
   }
 }
@@ -326,9 +320,9 @@ img {
   }
 }
 
-@media screen and (max-height: 640px) {
+@media (max-height: 640px) and (max-width: 320px) {
   .sessao__home {
-    height: calc(100vh - 250px);
+    height: calc(100vh - 200px);
   }
 }
 
@@ -381,6 +375,7 @@ img {
     font-family: "Lato", sans-serif;
     color: #0B6699;
     max-width: 175px;
+    margin-left: -10px;
   }
 }
 
@@ -408,6 +403,15 @@ img {
   }
 }
 
+.sessao__home .home-grid-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 @media screen and (max-width: 980px) {
   .sessao__home .home-grid-2 {
     display: none;
@@ -415,44 +419,15 @@ img {
 }
 
 .sessao__home .home-grid-2 img {
-  width: 102%;
-  position: relative;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 1438px) {
-  .sessao__home .home-grid-2 img {
-    width: 120%;
-    top: 10%;
-    right: 0%;
-  }
-}
-
-@media screen and (max-width: 1120px) {
-  .sessao__home .home-grid-2 img {
-    width: 120%;
-    top: 15%;
-    right: -3%;
-  }
-}
-
-@media screen and (max-height: 920px) {
-  .sessao__home .home-grid-2 img {
-    width: 83%;
-  }
-}
-
-@media screen and (max-height: 774px) {
-  .sessao__home .home-grid-2 img {
-    width: 70%;
-  }
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .mobile__home__session {
   display: none;
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 980px) {
   .mobile__home__session {
     display: block;
     background: url("../img/bg-fundo-mbl.png") no-repeat;
@@ -479,17 +454,17 @@ img {
   }
 }
 
-@media screen and (max-width: 756px) and (max-height: 640px) {
+@media screen and (max-width: 980px) and (max-height: 640px) and (max-width: 320px) {
   .mobile__home__session div p {
     padding-bottom: 16px;
   }
 }
 
-.wpp-icon {
+.icon {
   position: fixed;
   width: 130px;
   height: 80px;
-  bottom: 200px;
+  bottom: 110px;
   left: -5px;
   font-family: "Lato", sans-serif;
   background-color: #931854;
@@ -506,13 +481,13 @@ img {
 }
 
 @media screen and (max-width: 980px) {
-  .wpp-icon {
+  .icon {
     font-size: 24px;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .wpp-icon {
+  .icon {
     font-size: 20px;
     max-width: 100px;
     padding-top: 8px;
@@ -520,17 +495,17 @@ img {
 }
 
 @media screen and (max-width: 756px) {
-  .wpp-icon {
+  .icon {
     display: none;
   }
 }
 
-.wpp-icon p {
+.icon p {
   padding-top: 8px;
 }
 
 @media screen and (max-height: 630px) {
-  .wpp-icon {
+  .icon {
     bottom: 120px;
   }
 }
