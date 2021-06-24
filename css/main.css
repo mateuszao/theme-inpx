@@ -193,7 +193,7 @@ img {
 
 @media screen and (max-width: 980px) {
   .menu .mainMenu {
-    width: 70%;
+    width: 75%;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -377,7 +377,7 @@ img {
 
 @media screen and (max-width: 756px) {
   .sessao__home .home-grid-1 h1 {
-    font-size: 38px;
+    font-size: 42px;
     font-family: "Lato", sans-serif;
     color: #0B6699;
     max-width: 175px;
@@ -438,13 +438,13 @@ img {
 
 @media screen and (max-height: 920px) {
   .sessao__home .home-grid-2 img {
-    width: 80%;
+    width: 83%;
   }
 }
 
-@media screen and (max-height: 630px) {
+@media screen and (max-height: 774px) {
   .sessao__home .home-grid-2 img {
-    width: 75%;
+    width: 70%;
   }
 }
 
