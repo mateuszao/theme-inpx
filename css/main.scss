@@ -66,11 +66,11 @@
   flex-direction: row;
 
   @include responsive-tablet-Small(){
-    height: calc(100vh - 290px);
+    height: calc(100vh - 250px);
   }
 
   @include responsive-mobile-Medium(){
-    height: calc(100vh - 450px);
+    height: calc(100vh - 330px);
   }
 
   @include responsive-mobile-Small(){
@@ -113,7 +113,8 @@
       }
 
       @include responsive-tablet-Small(){
-        @include baseTituloSite(42px, $Lato, $Font-01);
+        @include baseTituloSite(38px, $Lato, $Font-01);
+        max-width: 175px;
       }
     }
 

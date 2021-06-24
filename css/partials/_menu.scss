@@ -13,8 +13,9 @@
 }	
 
 @include responsive-notebook(){
-	.menu-logo {
-		width: 100px;
+	.menu-logo img {
+		width: 59px;
+    height: 75px;
 	}	
 }
 
@@ -25,11 +26,6 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-
-	.menu a {
-		//color: #FFFFFF;
-		//color: #2A2A2A;
-	}
 }
 
 .menu-nav ul {
@@ -52,23 +48,6 @@
 	}	
 }
 
-// .a-link-menu::after {
-// 	content: '';
-// 	display: block;
-// 	width: 0;
-// 	height: 3px;
-// 	background: $Font-02;
-// 	//background: $Font-01;
-
-// 	transition: width .3s;
-// 	margin-top: 5px;
-// }
-
-// .a-link-menu:hover::after {
-// 	width: 100%;
-// 	transform: width .3s;
-// }
-
 .openMenu, .closeMenu  {
 	font-size: 2rem;
 	margin: 20px;
@@ -80,19 +59,18 @@
 
 @include responsive-tablet-large(){
 	.menu .mainMenu  {
-		width: 100%;
+		width: 70%;
 		height: 100vh;
 		position: fixed;
 		top: 0;
 		right: 0;
-		left: 0;
 		z-index: 1000;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background: #EDEDED;
-		transition: top 1s ease;
+		justify-content: flex-start;
+		padding-top: $gap-5;
+		background: $Font-03;
+		transition: right 1s ease;
 		display: none;
 	}
 
@@ -100,7 +78,7 @@
 		display: block;
 		position: absolute;
 		top: 20px;
-		right: 20px;
+		left: 0px;
 	}
 
 	.menu .openMenu {
@@ -108,11 +86,14 @@
 	}
 
 	.menu a {
-		color: $Font-01;
+		color: $Font-02;
+		font-family: $Lato;
+		font-size: 28px;
+		padding-bottom: $gap-3;
 	}
 
 	.closeMenu {
-		color: $Font-01;
+		color: $Font-02;
 	}
 
 	.openMenu {
