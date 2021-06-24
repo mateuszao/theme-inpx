@@ -47,6 +47,12 @@
   }  
 }
 
+@mixin responsive-notebook-height-medium-1(){
+  @media screen and ( max-height: 774px ){
+    @content;
+  }  
+}
+
 @mixin responsive-notebook-height-medium(){
   @media screen and ( max-height: 630px ){
     @content;

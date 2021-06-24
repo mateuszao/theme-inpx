@@ -113,7 +113,7 @@
       }
 
       @include responsive-tablet-Small(){
-        @include baseTituloSite(38px, $Lato, $Font-01);
+        @include baseTituloSite(42px, $Lato, $Font-01);
         max-width: 175px;
       }
     }
@@ -152,12 +152,16 @@
       }
 
       @include responsive-notebook-height(){
-        width: 80%;
+        width: 83%;
       }
 
-      @include responsive-notebook-height-medium(){
-        width: 75%;
+      @include responsive-notebook-height-medium-1(){
+        width: 70%;
       }
+
+      // @include responsive-notebook-height-medium(){
+      //   width: 75%;
+      // }
 
 
       position: relative;
